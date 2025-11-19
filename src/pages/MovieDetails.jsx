@@ -14,7 +14,8 @@ export default function MovieDetails() {
   return (
     <div>MovieDetails
 
-      <h1>Movie Name</h1>
+      <h1>Movie Namee</h1>
+      <p>un paragraph de salwa</p>
       <div>
         <img ></img>
         <div className='deatils'>
