@@ -1,9 +1,6 @@
-import react from "react";
-import { Routes, Route, BrowserRouter} from "react-router";
-import Contact from './pages/Contact'
-import Home from './pages/Home'
-import MovieDetails from './pages/MovieDetails'
-
+import logo from './logo.svg';
+import './App.css';
+import 
 
 function App() {
 
