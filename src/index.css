@@ -36,7 +36,7 @@ body{
 /*===================heroSection================================*/
 
 .heroSection{
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(../public/heroSection2\ pic.jpg);
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(../public/heroSection2_pic.jpg);
   background-size: contain;
   height: 80vh;
   display: flex;
