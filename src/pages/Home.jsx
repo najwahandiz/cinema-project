@@ -1,10 +1,31 @@
 import { Link } from "react-router-dom";
 import  Movies from "../Data/Movie";
 
-function Home() {
+// function Home() {
+//   return (
+    // <div style={{ padding: "20px" }}>
+    //   <h1>Galerie</h1>
+{/* import React from 'react';
+import { useEffect,useState } from 'react';
+import MovieCard from '../components/MovieCard';
+import Movies from '../Data/Movie';
+import { Link } from 'react-router'; */}
+
+export default function Home() {
+  
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Galerie</h1>
+    <div>
+       <section class="heroSection">
+        <h2>Welcome</h2>
+        <p> Every movie you discover here open a new door to imagination, emotion, and unforgettable cinematic moments.</p>
+        {/* <button><Link to="/Contact">Explore more</Link></button> */}
+       </section>
+      
+        
+      
+
+      
+
 
       <div style={{ display: "flex", gap: "20px" }}>
         {Movies.map((item) => (
@@ -30,4 +51,3 @@ function Home() {
   );
 }
 
-export default Home;

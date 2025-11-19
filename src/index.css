@@ -1,13 +1,103 @@
-body {
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Header{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  top: 0;
+}
+
+.navList{
+   padding-top: 10px;
+}
+
+
+.navList li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.navList li a {
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  color: red;
+}
+
+/*===================heroSection================================*/
+
+.heroSection{
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(../public/heroSection2\ pic.jpg);
+  background-size: contain;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroSection p{
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    justify-content: center;
+    line-height: 40px;
+    width: 40%;
+    padding-left: 390px;
+    
+}
+
+/*=============================Footer============================*/
+
+.footer{
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0.5,0.6)),url(/public/2151067003.jpg);
+  /* background-color: black; */
+  background-size: contain;
+  height: 100vh;
+  margin-bottom: 0;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.footer h2{
+  color: red;
+  font-size: 42px;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  padding-top: 220px;
+}
+
+.footer h3{
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+ 
+}
+
+.footer p{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 72%;
+    line-height: 40px;
+    margin: 0 auto;
+ 
 }

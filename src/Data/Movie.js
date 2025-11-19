@@ -1,7 +1,8 @@
 import { Form } from "react-router";
 // import Mv1 from "./Assets/le-film-qui-a-inspire.jpg";
 
-const Movies = [
+
+   const Movies = [
   {
     id: 1,
     name: "Garcon",
