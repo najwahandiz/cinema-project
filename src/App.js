@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter} from "react-router";
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import MovieDetails from './pages/MovieDetails'
+
 import Movies from "./Data/Movie";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
