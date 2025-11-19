@@ -1,27 +1,33 @@
-import React from 'react';
-import { useEffect,useState } from 'react';
+import { Link } from "react-router-dom";
+import  Movies from "../Data/Movie";
 
-export default function Home() {
+function Home() {
   return (
-    <div>
-        <div>
-            <img src="cinema-project/public/4b890462-e9e0-4532-84f4-6b4530699c14.webp" alt="" />
-            <h1>AUX JOURS QUI VIENNENT</h1>
-        </div>
-        <div>
-            <img src='cinema-project/public/5e331d5d-0d84-4009-808d-e22b9693497f.webp' alt=''/>
-            <h1>MARIUS</h1>
-        </div>
-        <div>
-            <img src="cinema-project/public/25ad5441-291a-4a9e-b7c6-e6d17d9b5e85.webp" alt=""/>
-            <h1>SALLY BAUER </h1>
-        </div>
-        <div>
-            <img src='cinema-project/public/43e14d99-6c24-45fe-9a07-3fc62b795f34.webp'/>
+    <div style={{ padding: "20px" }}>
+      <h1>Galerie</h1>
 
-        </div>
-
-
+      <div style={{ display: "flex", gap: "20px" }}>
+        {Movies.map((item) => (
+          <Link
+            key={item.id}
+            to={`/details/${item.id}`}
+            style={{
+              width: "200px",
+              textDecoration: "none",
+              color: "black",
+              border: "1px solid #ddd",
+              borderRadius: "10px",
+              padding: "10px",
+              cursor: "pointer",
+            }}
+          >
+            <img src={item.image} alt={item.name} style={{ width: "100%", borderRadius: "8px" }} />
+            <h3>{item.name}</h3>
+          </Link>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
+
+export default Home;
