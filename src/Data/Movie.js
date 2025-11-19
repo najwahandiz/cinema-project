@@ -1,6 +1,5 @@
 
-function Data(){
-         const Movies = [
+   const Movies = [
   {
     id: 1,
     name: "Inception",
@@ -74,7 +73,5 @@ function Data(){
   }
 ];
 
-return Movies
 
-
-}
+export default Movies
