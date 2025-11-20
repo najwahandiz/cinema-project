@@ -19,7 +19,7 @@ function App() {
          <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path='/Contact' element={<Contact/>}></Route>
-          <Route path="/MovieDetails" element={<MovieDetails/>}></Route>
+          <Route path="/MovieDetails/:id" element={<MovieDetails/>}></Route>
          </Routes>
       <Footer/>
       </BrowserRouter>

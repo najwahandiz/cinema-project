@@ -11,7 +11,7 @@ import MovieCard from '../components/MovieCard';
 import Movies from '../Data/Movie';
 import { Link } from 'react-router'; */}
 
-export default function Home() {
+export default function Home(movie ) {
   
   return (
     <div>
@@ -21,17 +21,12 @@ export default function Home() {
         {/* <button><Link to="/Contact">Explore more</Link></button> */}
        </section>
       
-        
-      
-
-      
-
 
       <div style={{ display: "flex", gap: "20px" }}>
         {Movies.map((item) => (
           <Link
             key={item.id}
-            to={`/details/${item.id}`}
+            to={`/MovieDetails/${item.id}`}
             style={{
               width: "200px",
               textDecoration: "none",
