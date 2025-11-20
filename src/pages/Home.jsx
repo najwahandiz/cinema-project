@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import  Movies from "../Data/Movie";
+import './Home.css'; 
 
 // function Home() {
 //   return (
@@ -23,8 +24,10 @@ export default function Home(movie ) {
       
 
       <div style={{ display: "flex", gap: "20px" }}>
+       
+      <div className="card">
         {Movies.map((item) => (
-          <Link
+          <Link className="link-card"
             key={item.id}
             to={`/MovieDetails/${item.id}`}
             style={{
@@ -36,6 +39,8 @@ export default function Home(movie ) {
               padding: "10px",
               cursor: "pointer",
             }}
+            to={`/details/${item.id}`}
+            
           >
             <img src={item.image} alt={item.name} style={{ width: "100%", borderRadius: "8px" }} />
             <h3>{item.name}</h3>
