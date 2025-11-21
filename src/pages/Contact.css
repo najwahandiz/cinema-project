@@ -1,58 +1,44 @@
-.contact-container {
-  max-width: 450px;
-  margin: 70px auto;
-  padding: 50px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  background: #121111;
+
+.contact {
+  max-width: 500px;
+  margin: 170px auto;
+  padding: 25px;
+  background-color: hwb(0 96% 4%);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(53, 52, 52, 0.1);
   font-family: Arial, sans-serif;
 }
 
-.contact-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #ccc;
+
+.contact div {
+  margin-bottom: 15px;
 }
 
 
+.contact label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #161414;
+}
 
-.contact-container input,
-.contact-container textarea {
+
+.contact input,
+.contact textarea {
   width: 100%;
-  padding: 17px;
-  margin-top: 10px;
-  border: 1px solid #343131;
-  border-radius: 10px;
-  
-  
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
 }
-
-.contact-container button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 15px;
-  border:none;
-  background: #d31919;
-  color: rgb(240, 233, 233);
-  font-size: 19px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.contact-container button:hover {
-  background: #45a049;
-}
-
-
-
 .error {
   color: red;
+  margin-top: 10px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .success {
   color: green;
+  margin-top: 10px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
