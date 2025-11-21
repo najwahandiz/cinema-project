@@ -21,7 +21,7 @@ export default function Home() {
           {Movies.map((item) => (
             <Link className="link-card"
               key={item.id}
-              to={`/MovieDetails/${item.id}`}
+              to={`/details/${item.id}`}
             >
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
