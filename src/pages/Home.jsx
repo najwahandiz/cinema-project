@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import  Movies from "../Data/Movie";
 import './Home.css'; 
+import PopUp from "./pop-up.jsx";
+
 
 
 export default function Home() {
   
   return (
     <div>
+      <PopUp />
        <section class="heroSection">
         <div class="heroDiv">
           <h2>YOUR CINEMATIC JOURNEY</h2>
