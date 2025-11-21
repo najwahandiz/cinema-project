@@ -1,49 +1,56 @@
 .contact-container {
   max-width: 450px;
-  margin: 70px auto;
+  margin: 130px auto ;
   padding: 50px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  background: #121111;
+  border: 1px solid #f1e9e9;
+  border-radius: 50px;
+  background: #0b0808;
   font-family: Arial, sans-serif;
+  color: #f1e9e9;
 }
 
 .contact-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #ccc;
+  color: #d7caca;
 }
 
+.contact-container div {
+  margin-bottom: 30px;
+}
 
+.contact-container label {
+  display:flex;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
 .contact-container input,
 .contact-container textarea {
   width: 100%;
-  padding: 17px;
-  margin-top: 10px;
-  border: 1px solid #343131;
+  padding: 15px;
+  border: 1px solid #242020;
   border-radius: 10px;
-  
-  
+  background-color: #5e5c5c;
+  color: #fff;
 }
+
 
 .contact-container button {
   width: 100%;
   padding: 15px;
   margin-top: 15px;
-  border:none;
-  background: #d31919;
-  color: rgb(240, 233, 233);
-  font-size: 19px;
-  border-radius: 20px;
-  cursor: pointer;
+  background: #e22e2e;
+  color: #f0e9e9;
+  font-size: 20px;
+  border-radius:10px;
+  cursor:pointer;
+  
 }
 
 .contact-container button:hover {
-  background: #45a049;
+  background: #5672c6;
 }
-
-
 
 .error {
   color: red;
@@ -56,3 +63,11 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+/* @media (max-width:800PX){
+.contact-container{
+  margin: 20;
+  padding: 40;
+}
+
+
+} */
