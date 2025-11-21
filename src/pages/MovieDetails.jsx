@@ -7,6 +7,8 @@ import Movies from '../Data/Movie'
 export default function MovieDetails() {
 
   const {id}=useParams()
+  console.log(id);
+  
   const navigate=useNavigate()
 
   const movie=Movies.find(m=>String(m.id)===String(id));
