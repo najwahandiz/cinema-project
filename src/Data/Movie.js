@@ -79,7 +79,125 @@ import { Form } from "react-router";
     description:
       "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
     image: '/images/Mv6.jpg'
+  },
+
+  {
+    id: 7,
+    name: "ARCHER",
+    year: 2018,
+    time:"182 min",
+    category: "Crime / Action",
+    language: "English ",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv7.jpg'
+  },
+
+  {
+    id: 8,
+    name: "TORN PAPER",
+    year: 2015,
+    time:"182 min",
+    category: "Crime / Drama",
+    language: "English / Italian",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv8.jpg'
+  },
+
+   {
+    id: 9,
+    name: "SIRIUS",
+    year: 2020,
+    time:"182 min",
+    category: "Drama",
+    language: "English",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv9.jpg'
+  },
+
+   {
+    id: 10,
+    name: "DUNE",
+    year: 2015,
+    time:"182 min",
+    category: "Crime / Drama",
+    language: "English / Italian",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv10.jpg'
+  },
+
+   {
+    id: 11,
+    name: "TOP GUN",
+    year: 2019,
+    time:"182 min",
+    category: "Adventure / Sci-Fi",
+    language: "English / Italian",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv11.jpg'
+  },
+
+  {
+    id: 12,
+    name: "ROLE PLAY",
+    year: 2021,
+    time:"182 min",
+    category: "Drama / Sci-Fi",
+    language: "English / Italian",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv12.jpg'
+  },
+
+  {
+    id: 13,
+    name: "INSAISISSABLES",
+    year: 2022,
+    time:"182 min",
+    category: " Adventur",
+    language: "English ",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv13.jpg'
+  },
+
+  {
+    id: 14,
+    name: "YOUR HEADLINE",
+    year: 2017,
+    time:"182 min",
+    category: "Drama ",
+    language: "English / Italian",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv14.jpg'
+  },
+
+  {
+    id: 15,
+    name: "INTRUS",
+    year: 2021,
+    time:"182 min",
+    category: "Horror",
+    language: "English / Italian",
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"],
+    description:
+      "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+    image: '/images/Mv15.jpg'
   }
+  
 ];
 
 

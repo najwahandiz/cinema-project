@@ -36,32 +36,127 @@ body{
 /*===================heroSection================================*/
 
 .heroSection{
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(../public/heroSection2_pic.jpg);
-  background-size: contain;
-  height: 80vh;
+  /* position: relative; */
+  margin-top: 50px;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../public/heroSectionGI1.jpg);
+  background-size: cover;
+  height: 85vh;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  
 }
 
-.heroSection p{
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    justify-content: center;
-    line-height: 40px;
-    width: 40%;
-    padding-left: 390px;
-    
+.heroDiv{
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px); /* flou moderne */
+  margin: 350px;
+  max-height: 270px;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  border-radius: 12px ;
+  text-align: center;
+  color: white;
+  padding: 30px;
+}
+
+.heroSection h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e52323; 
+  letter-spacing: 2px;
+  margin-bottom: 17px;
+  margin-top: 13px;
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  margin-top: 25px;
+  background-color: #e52323;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.hero-btn:hover {
+  background-color: #ff3b3b;
+  transform: translateY(-2px);
 }
 
 /*==============movieDtails====================================*/
 
+.noFilmSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  color: white;
+}
+
+.noFilmDiv {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 60px;
+  margin-top: 80px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.noFilmDiv h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ff2e2e;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.noFilmDiv p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.noFilmDiv button {
+  background: #ff2e2e;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.noFilmDiv button:hover {
+  background: #ff4747;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/*--------------------------------------------*/
+
 .movieDtails{
   background-color: white;
-  /* background: linear-gradient(135deg, #141414, #530a0a); */
   color: white;
   height: 550px;
   display: flex;
@@ -73,17 +168,18 @@ body{
 
 .movieImg img{
   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9));
-  border: rgb(207, 18, 18) solid 2px;
+  border: rgb(99, 6, 6) solid 2px;
   margin-top:20px ;
   border-radius: 8px;
   height: 524px;
 }
 
 .Details{
- background-color: rgb(5, 5, 5);
+ /* background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(141, 21, 21, 0.2)); */
+ background-color: black;
  margin-top:20px ;
  padding: 15px;
- border: rgb(190, 28, 28) solid 2px;
+ border: rgb(134, 4, 4) solid 3px;
  border-radius: 8px;
  line-height: 25px;
  max-width: 700px;
@@ -91,9 +187,13 @@ body{
 
 .movieTitle{
   margin-bottom: 40px;
-  color: red;
+  color: rgb(165, 14, 14);
   font-style: oblique;
   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+strong {
+  color: rgb(165, 14, 14);
 }
 
 .actors{
@@ -101,14 +201,14 @@ body{
 }
 
 #titleLine{
-  border: 1px solid red;
+  border: 1px white solid;
    width: 100%; 
    margin: 15px auto;
 }
 
 
 #actorsLine{
-    border: 1px solid red;
+    border: 1px solid white;
     width: 80%;
     margin: 20px auto;
     margin-top: -30px;
@@ -138,16 +238,6 @@ body{
   padding-top: 220px;
 }
 
-.footer h3{
-  color: red;
-  font-size: 22px;
-  font-weight: bold;
-  font-family:'Times New Roman', Times, serif;
-  text-align: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
- 
-}
 
 .footer p{
     color: white;
@@ -159,4 +249,14 @@ body{
     line-height: 40px;
     margin: 0 auto;
  
+}
+
+.copyright{
+  background: linear-gradient(rgba(245, 1, 1, 0.836),rgba(0,0,0,0.2));
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  margin-bottom: 0;
 }

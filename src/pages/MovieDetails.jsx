@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import MovieCard from '../components/MovieCard'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import { useLocation, useNavigate,navigate } from 'react-router'
 import { useParams } from 'react-router'
@@ -18,7 +17,7 @@ export default function MovieDetails() {
         movie ? (
           <div class="movieDtails">
             <div class="movieImg">
-              <img src={movie.image} alt="" />
+              <img src={movie.image} alt={movie.name} />
             </div>
             <div class="Details">
               <h1 class="movieTitle">{movie.name}</h1>
@@ -30,90 +29,24 @@ export default function MovieDetails() {
               <p><strong>Actors :</strong></p>
               <hr id="actorsLine"></hr>
               <p>{movie.actors.map((i)=>(<p class="actors">{i}</p>))}</p>
-           
               <p><strong>Description :</strong> {movie.description}</p>
-
             </div>
-
           </div>
           
         )
         : 
-        <section>
-          <h2>Film non trouvé</h2>
-          <p>Le film que vous recherchez n'existe pas.</p>
-          <button onClick={() => navigate("/")}>Retour à l'accueil</button>
+        <section className='noFilmSection'>
+          <div className='noFilmDiv'>
+            <h2>Film non trouvé</h2>
+            <p>Le film que vous recherchez n'existe pas.</p>
+            <button onClick={() => navigate("/")}>← Retour à l'accueil</button>
+          </div>
         </section>
       }
 
     </>
   )
 
-
-  // const movie=Movies.find(m=>String(m.id)===String(id));
-  // console.log(movie.name);
-  
-  
-
-  // return (
-  //   <div>MovieDetails
-
-  //     <h1>{movie.name}</h1>
-  //     <p>un paragraph de salwa</p>
-  //     <div>
-  //       {/* <img ></img> */}
-  //       <div className='deatils'>
-  //         <p>Time:</p>
-  //         <p>Year:</p>
-  //         <p>Actors:</p>
-  //         <p>Category:</p>
-  //         <p>language:</p>
-  //         <p>Description:</p>
-  //       </div>
-
-  //     </div>
-  //  const movie = Movies.find((m) => String(m.id) === String(id));
-
-  // cas film non trouvé (id invalide)
-  // if (!movie) {
-  //   return (
-      // <section>
-      //   <h2>Film non trouvé</h2>
-      //   <p>Le film que vous recherchez n'existe pas (id: {id}).</p>
-      //   <button onClick={() => navigate("/")}>Retour à l'accueil</button>
-      // </section>
-  //   );
-  // }
-
-  // return (
-  //   <section className="movie-details">
-  //     <button onClick={() => navigate(-1)} aria-label="Retour">
-  //       ← Retour
-  //     </button>
-
-  //     <div className="details-grid">
-  //       <img
-  //         src={movie.image}
-  //         alt={`Affiche - ${movie.title}`}
-  //         className="details-img"
-  //       />
-
-  //       <div className="details-info">
-  //         <h2>{movie.title} <span className="year">({movie.year})</span></h2>
-  //         <p className="description">{movie.description}</p>
-
-  //         <h3>Équipe</h3>
-  //         <ul>
-  //           {movie.team.map((p, i) => (
-  //             <li key={i}><strong>{p.role}:</strong> {p.name}</li>
-  //           ))}
-  //         </ul>
-  //       </div>
-  //     </div>
-  //   </section>
-   
-
-  // )
 
 
   

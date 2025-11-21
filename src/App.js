@@ -7,7 +7,7 @@ import MovieDetails from './pages/MovieDetails'
 import Movies from "./Data/Movie";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// import Movies from "./Data/Movie"
+
 
 
 function App() {
