@@ -1,55 +1,113 @@
-import React, { useState } from "react";
-import "./Contact.css";
+import { useState } from 'react';
+import './Contact.css';
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    nom: '',
+    email: '',
+    msg: ''
+  });
+
+  const [error, setError] = useState('');
+   const [success, setSuccess] = useState('');
+
+   function Changer(e) {
+    const { name, value } = e.target;
+     setFormData({ ...formData, [name]: value });
+   }
+
+   function Valider(e) {
     e.preventDefault();
 
-    if (!name || !email || !message) {
-      setError("Tous les champs sont obligatoires !");
-      setIsSuccess(false);
+    setError('');
+    setSuccess('');
+
+    if (!formData.nom || !formData.email || !formData.msg) {
+      setError('Tous les champs sont obligatoires !');
       return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("L'adresse email n'est pas valide !");
-      setIsSuccess(false);
+  
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError('Adresse e-mail invalide.');
       return;
-    }
+     }
+ 
+    setSuccess(' Message envoyé avec succès !');
 
-    setError("Le message a été envoyé avec succès !");
-    setIsSuccess(true);
+     const message = `
+      Votre nom : ${formData.nom}
+     Votre email : ${formData.email}
+     Votre message : ${formData.msg}`;
 
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+    alert(message);    
+     setFormData({
+      nom: '',
+      email: '',
+      msg: ''
+    });
+   }
 
   return (
-    <div className="contact-container">
-      <h2>Page Contact</h2>
+    <form onSubmit={Valider} className="contact">
 
-      <form onSubmit={handleSubmit}>
-        <input type="text"placeholder="Name"value={name}onChange={(e) => setName(e.target.value)}/>
+      <div>
+        <label htmlFor="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" value={formData.nom} onChange={Changer} />
+      </div>
 
-        <input type="text"placeholder="Email"value={email}onChange={(e) => setEmail(e.target.value)}/>
+      <div>
+        <label htmlFor="email">Email :</label>
+        <input type="email" id="email" name="email" value={formData.email} onChange={Changer} />
+      </div>
 
-        <textarea placeholder="Message"value={message}onChange={(e) => setMessage(e.target.value)}/>
+      <div>
+        <label htmlFor="msg">Message :</label>
+        <textarea id="msg" name="msg" value={formData.msg} onChange={Changer} />
+      </div>
 
-        <button type="submit">Envoyer</button>
-      </form>
+      
+      {error && <p className="error">{error}</p>}
 
-      {error && <p className={isSuccess ? "success" : "error"}>{error}</p>}
-    </div>
+      
+      {success && <p className="success">{success}</p>}
+
+      <button type="submit">Envoyer</button>
+    </form>
   );
 }
+
+          
+
+
+
+
+
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
 
 
 

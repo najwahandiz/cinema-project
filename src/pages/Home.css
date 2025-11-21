@@ -1,113 +1,69 @@
-.card { 
-  display: flex;
-  gap: 20px;
-  margin: 20vh;
-  justify-items: center;
-    
-}
+
 body {
   background-color: black;
 }
+
+
+#cardSection {
+  
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+}
+
+.card {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 30px; 
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
+
 .link-card {
-  width: 200px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;  
-  cursor: pointer;
-}
-img{
-  width: 100%;
-   border-radius: 8px;
-}
-
-.devPop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: flex; 
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  z-index: 999;
+  text-decoration: none; 
+  color: #f0f0f0; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* La boîte du pop-up */
-.popUp {
-  background: #ffffff;
-  width: 400px;
-  max-width: 90%;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.4s ease;
+
+.link-card img {
+  width: 100%; 
+  height: auto;
+  aspect-ratio: 2 / 3; /* Standard movie poster ratio */
+  object-fit: cover;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
 }
 
-/* Titre */
-.popUp h1 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  color: #333;
-}
-
-/* Texte du pop-up */
-.popUpContent h2 {
+/* Movie Name */
+.link-card h3 {
   margin-top: 10px;
-  color: #444;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  max-width: 100%;
 }
 
-.popUpContent p {
-  color: #555;
-  margin: 8px 0;
+.link-card:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.2); 
 }
 
-/* Input email */
-.inputEmail {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  outline: none;
+.link-card:hover img {
+  border: 2px solid #ff0000; 
+  transition: border 0.3s ease; 
 }
 
-.inputEmail:focus {
-  border-color: #6b4ce4;
+.link-card:hover h3 {
+  color: #ff0000; 
+  font-weight: 600;
 }
 
-/* Bouton */
-.popUpButton {
-  background: #6b4ce4;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: 0.3s;
-  display: fle;
-  gap: 20px;
-  margin: 0 50px;
-
-}
-
-.popUpButton:hover {
-  background: #5738c6;
-}
-
-/* Animation d'apparition */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  

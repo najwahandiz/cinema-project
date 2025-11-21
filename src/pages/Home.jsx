@@ -11,24 +11,27 @@ export default function Home() {
     <div>
       <PopUp />
        <section class="heroSection">
-        <h2>Welcome</h2>
-        <p> Every movie you discover here open a new door to imagination, emotion, and unforgettable cinematic moments.</p>
-       
+        <div class="heroDiv">
+          <h2>YOUR CINEMATIC JOURNEY</h2>
+          <p> Every movie you discover here open a new door to imagination, emotion, and unforgettable cinematic moments.</p>
+          <button class="hero-btn"><a href={'#cardSection'}>EXPLORE MOVIES</a></button>
+        </div>
        </section>
-       
-      <div className="card">
-        {Movies.map((item) => (
-          <Link className="link-card"
-            key={item.id}
-            to={`/details/${item.id}`}
-            
-          >
+      
+      
+      <div id="cardSection">
+        <div className="card">
+          {Movies.map((item) => (
+            <Link className="link-card"
+              key={item.id}
+              to={`/details/${item.id}`}
+            >
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-          </Link>
+            </Link>
         ))}
+        </div>
       </div>
     </div>
   );
 }
-
