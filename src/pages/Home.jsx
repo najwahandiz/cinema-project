@@ -2,15 +2,7 @@ import { Link } from "react-router-dom";
 import  Movies from "../Data/Movie";
 import './Home.css'; 
 
-// function Home() {
-//   return (
-    // <div style={{ padding: "20px" }}>
-    //   <h1>Galerie</h1>
-{/* import React from 'react';
-import { useEffect,useState } from 'react';
-import MovieCard from '../components/MovieCard';
-import Movies from '../Data/Movie';
-import { Link } from 'react-router'; */}
+
 
 export default function Home(movie ) {
   
@@ -46,6 +38,7 @@ export default function Home(movie ) {
             <h3>{item.name}</h3>
           </Link>
         ))}
+      </div>
       </div>
     </div>
   );
