@@ -1,52 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import './Home.css';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 
-function PopUp() {
+export default function PopUp() {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    // Vérifier si le popup a déjà été vu
     const alreadyShown = localStorage.getItem("popupShown");
-    console.log(alreadyShown);
-
-    // Si déjà vu → ne pas l'afficher
-    if (alreadyShown === "true") return;
-
-    // Sinon → afficher après 3 secondes
-    const timer = setTimeout(() => {
+    if (!alreadyShown) {
       setShowPopup(true);
-    }, 3000);
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+        localStorage.setItem("popupShown", "true");
+      }, 10000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const closePopup = () => {
     setShowPopup(false);
-
-    // Enregistrer dans localStorage
     localStorage.setItem("popupShown", "true");
   };
 
-  return (
-    <>
-      {showPopup && (
-        <div className="devPop">
-          <div className="popUp">
-            <h1>Bienvenue sur notre site</h1>
-            <div className="popUpContent">
-              <h2>Salut !</h2>
-              <p>Profitez de votre visite !</p>
-              <p>Entrez votre mail</p>
-              <input className="inputEmail" type="email" placeholder="Votre email" />
-              <button className="popUpButton" onClick={closePopup}>
-                Envoyer
-              </button>
-            </div>
-          </div>
+  if (!showPopup) return null;
+
+  return ReactDOM.createPortal(
+    <div className="devPop">
+      <div className="popUp">
+        <h1>Bienvenue sur notre site</h1>
+        <div className="popUpContent">
+          <h2>Salut !</h2>
+          <p>Profitez de votre visite !</p>
+          <p>Entrez votre mail</p>
+          <input className="inputEmail" type="email" placeholder="Votre email" />
+          <button className="popUpButton" onClick={closePopup}>
+            Envoyer
+          </button>
         </div>
-      )}
-    </>
+      </div>
+    </div>,
+    document.body
   );
 }
-
-export default PopUp;

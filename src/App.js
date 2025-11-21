@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import MovieDetails from './pages/MovieDetails'
@@ -18,8 +18,8 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path='/Contact' element={<Contact/>} />
           <Route path="/details/:id" element={<MovieDetails/>} />
-         </Routes>`
-         <Footer/>`
+         </Routes>
+         <Footer/>
 
       </BrowserRouter>
 

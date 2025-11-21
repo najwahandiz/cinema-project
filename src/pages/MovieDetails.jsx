@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router'
-import { useLocation, useNavigate,navigate } from 'react-router'
-import { useParams } from 'react-router'
+import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Movies from '../Data/Movie'
 
 export default function MovieDetails() {
@@ -17,12 +16,12 @@ export default function MovieDetails() {
     <>
       {
         movie ? (
-          <div class="movieDtails">
-            <div class="movieImg">
+          <div className="movieDtails">
+            <div className="movieImg">
               <img src={movie.image} alt={movie.name} />
             </div>
-            <div class="Details">
-              <h1 class="movieTitle">{movie.name}</h1>
+            <div className="Details">
+              <h1 className="movieTitle">{movie.name}</h1>
               <hr id="titleLine"></hr>
               <p><strong>Time :</strong> {movie.time}</p>
               <p><strong>Year :</strong> {movie.year}</p>
@@ -30,7 +29,7 @@ export default function MovieDetails() {
               <p><strong>Language :</strong> {movie.language}</p>
               <p><strong>Actors :</strong></p>
               <hr id="actorsLine"></hr>
-              <p>{movie.actors.map((i)=>(<p class="actors">{i}</p>))}</p>
+              {movie.actors.map((item, index)=>(<p key={index} className="actors">{item}</p>))}
               <p><strong>Description :</strong> {movie.description}</p>
             </div>
           </div>
