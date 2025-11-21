@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import  Movies from "../Data/Movie";
+import './Home.css'; 
 
 // function Home() {
 //   return (
@@ -11,7 +12,7 @@ import MovieCard from '../components/MovieCard';
 import Movies from '../Data/Movie';
 import { Link } from 'react-router'; */}
 
-export default function Home() {
+export default function Home(movie ) {
   
   return (
     <div>
@@ -21,17 +22,14 @@ export default function Home() {
         {/* <button><Link to="/Contact">Explore more</Link></button> */}
        </section>
       
-        
-      
-
-      
-
 
       <div style={{ display: "flex", gap: "20px" }}>
+       
+      <div className="card">
         {Movies.map((item) => (
-          <Link
+          <Link className="link-card"
             key={item.id}
-            to={`/details/${item.id}`}
+            to={`/MovieDetails/${item.id}`}
             style={{
               width: "200px",
               textDecoration: "none",
@@ -41,6 +39,8 @@ export default function Home() {
               padding: "10px",
               cursor: "pointer",
             }}
+            to={`/details/${item.id}`}
+            
           >
             <img src={item.image} alt={item.name} style={{ width: "100%", borderRadius: "8px" }} />
             <h3>{item.name}</h3>

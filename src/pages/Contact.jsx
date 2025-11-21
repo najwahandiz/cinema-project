@@ -24,7 +24,7 @@ export default function Contact() {
     setSuccess('');
 
     if (!formData.nom || !formData.email || !formData.msg) {
-      setError('❌ Tous les champs sont obligatoires !');
+      setError('Tous les champs sont obligatoires !');
       return;
     }
 

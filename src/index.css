@@ -38,7 +38,7 @@ body{
 /*===================heroSection================================*/
 
 .heroSection{
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(../public/heroSection2\ pic.jpg);
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url(../public/heroSection2_pic.jpg);
   background-size: contain;
   height: 80vh;
   display: flex;
@@ -58,6 +58,65 @@ body{
     padding-left: 390px;
     
 }
+
+/*==============movieDtails====================================*/
+
+.movieDtails{
+  background-color: white;
+  /* background: linear-gradient(135deg, #141414, #530a0a); */
+  color: white;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding: 80px;
+}
+
+.movieImg img{
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9));
+  border: rgb(207, 18, 18) solid 2px;
+  margin-top:20px ;
+  border-radius: 8px;
+  height: 524px;
+}
+
+.Details{
+ background-color: rgb(5, 5, 5);
+ margin-top:20px ;
+ padding: 15px;
+ border: rgb(190, 28, 28) solid 2px;
+ border-radius: 8px;
+ line-height: 25px;
+ max-width: 700px;
+}
+
+.movieTitle{
+  margin-bottom: 40px;
+  color: red;
+  font-style: oblique;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.actors{
+  padding-left: 18px;
+}
+
+#titleLine{
+  border: 1px solid red;
+   width: 100%; 
+   margin: 15px auto;
+}
+
+
+#actorsLine{
+    border: 1px solid red;
+    width: 80%;
+    margin: 20px auto;
+    margin-top: -30px;
+    margin-left: 84px;
+}
+
 
 /*=============================Footer============================*/
 
